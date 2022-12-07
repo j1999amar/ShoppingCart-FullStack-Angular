@@ -10,6 +10,7 @@ import { UserLoginPageComponent } from './user-login-page/user-login-page.compon
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { ViewProductComponent } from './view-product/view-product.component';
 const myRouter:Routes=[{
   path:"userLogin",
   component:UserLoginPageComponent
@@ -22,6 +23,10 @@ const myRouter:Routes=[{
 },{
   path:"addProduct",
   component:AddProductComponent
+},
+{
+  path:'viewProduct',
+  component:ViewProductComponent
 }]
 @NgModule({
   declarations: [
@@ -30,7 +35,8 @@ const myRouter:Routes=[{
     UserLoginPageComponent,
     UserRegistrationComponent,
     NavbarComponent,
-    AddProductComponent
+    AddProductComponent,
+    ViewProductComponent
   ],
   imports: [
     BrowserModule,
