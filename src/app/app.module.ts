@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { NavbarComponent } from './navbar/navbar.component';
 const myRouter:Routes=[{
   path:"userLogin",
   component:UserLoginPageComponent
@@ -23,7 +24,8 @@ const myRouter:Routes=[{
     AppComponent,
     AdminLoginComponent,
     UserLoginPageComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
