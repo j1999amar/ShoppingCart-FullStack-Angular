@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddProductComponent } from './add-product/add-product.component';
 const myRouter:Routes=[{
   path:"userLogin",
   component:UserLoginPageComponent
@@ -18,6 +19,9 @@ const myRouter:Routes=[{
 },{
   path:"userRegistration",
   component:UserRegistrationComponent
+},{
+  path:"addProduct",
+  component:AddProductComponent
 }]
 @NgModule({
   declarations: [
@@ -25,11 +29,12 @@ const myRouter:Routes=[{
     AdminLoginComponent,
     UserLoginPageComponent,
     UserRegistrationComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,RouterModule.forRoot(myRouter)
+    AppRoutingModule,FormsModule,RouterModule.forRoot(myRouter),HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
