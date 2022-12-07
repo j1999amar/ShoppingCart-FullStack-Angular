@@ -6,11 +6,16 @@ import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-const myRouter:Routes=[{}]
+import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
+const myRouter:Routes=[{
+  path:"userLogin",
+  component:UserLoginPageComponent
+}]
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    UserLoginPageComponent
   ],
   imports: [
     BrowserModule,

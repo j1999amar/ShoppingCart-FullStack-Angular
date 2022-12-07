@@ -7,21 +7,19 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="row g-3">
-                        <h4>Admin Login</h4>
+                        <h4>User Login</h4>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label for="" class="form-label">Username</label>
-                            <input name="adminUserName" [(ngModel)]="adminUserName" type="text" name="" id="" class="form-control">
+                            <input name="userLogin" [(ngModel)]="userLogin" type="text" name="" id="" class="form-control">
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label for="" class="form-label">Password</label>
-                            <input name="adminPassWord" [(ngModel)]="adminPassWord"  type="password" name="" id="" class="form-control">
+                            <input name="password" [(ngModel)]="password" type="password" name="" id="" class="form-control">
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <button class="btn btn-primary" (click)="readValue()">Login</button>
+                            <button class="btn btn-primary"(click)="readValue()" >Login</button><br><br>
+                            <a routerLink="/userRegistration">User Registration</a>
                         </div>
-                        <a routerLink="/userLogin">Click Here For User Login</a>
-                        <a href="">Click Here For User Registration</a>
-
                     </div>
                 </div>
             </div>
