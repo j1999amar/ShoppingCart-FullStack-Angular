@@ -1,16 +1,29 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+<app-admin-navbar></app-admin-navbar>
+<div class="conatiner">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-12 col-xxl-12">
+        <table class="table ">
+          <thead>
+            <tr  >
+              <th scope="col"> Product Name </th>
+              <th scope="col">Product Image</th>
+              <th scope="col">Product Category</th>
+              <th scope="col">Product Description</th>
+              <th scope="col">Product Price</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of data" >
+              <td colspan="1">{{i.productName}}</td>
+              <td>{{i.imageLink}}</td>
+              <td>{{i.category}}</td>
+              <td>{{i.description}}</td>
+              <td>{{i.price}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
