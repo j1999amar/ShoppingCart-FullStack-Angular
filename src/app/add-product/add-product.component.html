@@ -1,3 +1,4 @@
+<app-admin-navbar></app-admin-navbar>
 <div class="container">
     <div class="row">
         <h4>Add Product</h4>
@@ -8,7 +9,7 @@
                     <input type="text" name="" id="" class="form-control" name="productName"[(ngModel)]=productName >
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Image Link Name</label>
+                    <label for="" class="form-label">Image Link</label>
                     <input type="text" name="" id="" class="form-control" name="imageLink"[(ngModel)]=imageLink >
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
@@ -16,12 +17,12 @@
                     <input type="text" name="" id="" class="form-control" name="category"[(ngModel)]=category >
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Description</label>
-                    <input type="text" name="" id="" class="form-control" name="description"[(ngModel)]=description >
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Price</label>
                     <input type="text" name="" id="" class="form-control" name="price"[(ngModel)]=price >
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Description</label>
+                    <textarea name="description"[(ngModel)]=description class="form-control" name="" id=""  rows="3"></textarea>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <button class="btn btn-primary"(click)="readValue()">Submit</button>

@@ -7,5 +7,11 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http:HttpClient) { }
+  fetchData=()=>{
+    return this.http.get('http://localhost:8080/viewProducts')
+  }
+  sendData=(dataToSend:any)=>{
+    return this.http.post('http://localhost:8080/addProducts',dataToSend)
+  }
   
 }
