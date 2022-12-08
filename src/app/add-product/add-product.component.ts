@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./add-product.component.css'],
 })
 export class AddProductComponent {
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService,private router:Router) {}
   productName = '';
   imageLink = '';
   category = '';
@@ -24,6 +25,15 @@ export class AddProductComponent {
     this.api.sendData(data).subscribe(
       (response:any)=>{
         console.log(response)
+        if(response.status=="success"){
+          this.productName = '';
+          this.imageLink = '';
+          this.category = '';
+          this.description = '';
+          this.price = '';        
+        }else{
+          alert("failed to add")
+        }
       }
     )
   };
