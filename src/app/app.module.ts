@@ -13,6 +13,8 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { ViewNavbarComponent } from './view-navbar/view-navbar.component';
+import { UserViewProductComponent } from './user-view-product/user-view-product.component';
 const myRouter:Routes=[{
   path:"userLogin",
   component:UserLoginPageComponent
@@ -32,6 +34,9 @@ const myRouter:Routes=[{
 },{
   path:'searchProduct',
   component:SearchProductComponent
+},{
+  path:'userViewProduct',
+  component:UserViewProductComponent
 }]
 @NgModule({
   declarations: [
@@ -43,7 +48,9 @@ const myRouter:Routes=[{
     AddProductComponent,
     ViewProductComponent,
     SearchProductComponent,
-    AdminNavbarComponent
+    AdminNavbarComponent,
+    ViewNavbarComponent,
+    UserViewProductComponent
   ],
   imports: [
     BrowserModule,
