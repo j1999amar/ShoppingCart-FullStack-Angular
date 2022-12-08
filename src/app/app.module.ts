@@ -11,6 +11,7 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { SearchProductComponent } from './search-product/search-product.component';
 const myRouter:Routes=[{
   path:"userLogin",
   component:UserLoginPageComponent
@@ -36,7 +37,8 @@ const myRouter:Routes=[{
     UserRegistrationComponent,
     NavbarComponent,
     AddProductComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    SearchProductComponent
   ],
   imports: [
     BrowserModule,
