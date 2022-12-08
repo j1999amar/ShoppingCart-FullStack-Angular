@@ -7,12 +7,38 @@
     
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                         <label for="" class="form label">Product Name</label>
-                        <input type="text" name="" id="" class="form-control">
+                        <input type="text" name="productname" [(ngModel)]="productName" id="" class="form-control">
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <button class="btn btn-primary">Search</button>
+                        <button class="btn btn-primary"(click)="readValue()" >Search</button>
                     </div>
             </div>
         </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product Category</th>
+                            <th scope="col">Product Description</th>
+                            <th scope="col">Product Price</th>
+                            <th scope="col">Product Image</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of data" >
+                                <td colspan="1">{{i.productName}}</td>
+                                <td>{{i.category}}</td>
+                                <td>{{i.description}}</td>
+                                <td>{{i.price}}</td>
+                                <td><img src="{{i.imageLink}}" width="70px" height="50px" alt=""></td>
+                              </tr>
+                        </tbody>
+                      </table>
+                    </div>
+        </div>
+    </div>
     </div>
 </div>
