@@ -1,5 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./user-registration.component.css'],
 })
 export class UserRegistrationComponent {
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService,private route:Router) {}
   name = '';
   address = '';
   phone = '';
@@ -26,8 +27,17 @@ export class UserRegistrationComponent {
       this.api.addUser(data).subscribe(
         (response)=>{
           console.log(response)
+          this.route.navigate(['/userLogin'])
         }
       )
+    }else{
+      alert ("failed")
+      this.name = '';
+      this.address = '';
+      this.phone = '';
+      this.userLogin = '';
+      this.password = '';
+      this.confirmPassword = '';
     }
   };
 }

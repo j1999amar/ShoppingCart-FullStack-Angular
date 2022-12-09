@@ -25,7 +25,9 @@ export class ApiService {
   }
   searchUser=(dataToSend:any)=>{
     return this.http.post('http://localhost:8080/searchUser',dataToSend)
-
+  }
+  deleteProduct=(dataToSend:any)=>{
+    return this.http.post('http://localhost:8080/deleteProducts',dataToSend)
 
   }
 }

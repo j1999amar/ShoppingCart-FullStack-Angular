@@ -9,6 +9,7 @@ import { ApiService } from '../api.service';
 export class SearchProductComponent {
   constructor(private api:ApiService){}
   productName=""
+  pid=""
   data:any=[]
   readValue=()=>{
     let data ={"productName":this.productName}
@@ -17,10 +18,15 @@ export class SearchProductComponent {
         console.log(response)
         this.data=response
         this.productName=""
-
       }
     )
-
   }
-
+  deleteitem=(delId:any)=>{
+    console.log(delId)
+let deleteItem={"id":delId}
+    this.api.deleteProduct(deleteItem).subscribe(
+      (response)=>{
+      }
+    )
+  }
 }

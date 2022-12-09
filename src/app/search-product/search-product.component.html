@@ -33,7 +33,9 @@
                                 <td>{{i.category}}</td>
                                 <td>{{i.description}}</td>
                                 <td>{{i.price}}</td>
-                                <td><img src="{{i.imageLink}}" width="70px" height="50px" alt=""></td>
+                                <td><img src="{{i.imageLink}}" width="70px" height="50px" alt=""><br>
+                                <button class="btn danger  " name="productName" (click)="deleteitem(i.id)" >Delete</button>
+                                </td>
                               </tr>
                         </tbody>
                       </table>

@@ -14,7 +14,6 @@ export class ViewProductComponent {
 this.data=response;
       }
     )
-    console.log(this.data)
 
   }
 
