@@ -6,11 +6,23 @@ import { ApiService } from '../api.service';
   templateUrl: './search-product.component.html',
   styleUrls: ['./search-product.component.css']
 })
-export class SearchProductComponent {
-  constructor(private api:ApiService){}
+export class SearchProductComponent {  data:any=[]
+
+  constructor(private api:ApiService){
+    this.api.fetchData().subscribe(
+      (response:any)=>{
+        this.data=response
+        console.log(this.data)
+
+      }
+    )
+
+    
+  }
+  
+
   productName=""
-  pid=""
-  data:any=[]
+
   readValue=()=>{
     let data ={"productName":this.productName}
     this.api.searchData(data).subscribe(
@@ -28,5 +40,7 @@ let deleteItem={"id":delId}
       (response)=>{
       }
     )
+    this.productName=""
+    window.location.reload()
   }
 }

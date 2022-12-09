@@ -7,9 +7,17 @@ import { ApiService } from '../api.service';
   styleUrls: ['./user-view-product.component.css']
 })
 export class UserViewProductComponent {
-  constructor(private api:ApiService){}
-  productName=""
   data:any=[]
+
+  constructor(private api:ApiService){
+    this.api.fetchData().subscribe(
+      (response:any)=>{
+        this.data=response
+
+      }
+    )
+  }
+  productName=""
   readValue=()=>{
     let data ={"productName":this.productName}
     this.api.searchData(data).subscribe(

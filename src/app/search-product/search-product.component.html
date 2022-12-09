@@ -17,7 +17,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <table class="table">
+                    <table class="table table-warning">
                         <thead>
                           <tr>
                             <th scope="col">Product Name</th>
@@ -34,7 +34,7 @@
                                 <td>{{i.description}}</td>
                                 <td>{{i.price}}</td>
                                 <td><img src="{{i.imageLink}}" width="70px" height="50px" alt=""><br>
-                                <button class="btn danger  " name="productName" (click)="deleteitem(i.id)" >Delete</button>
+                                <button  class="btn btn-danger mt-1  " name="productName" (click)="deleteitem(i.id)" >Delete</button>
                                 </td>
                               </tr>
                         </tbody>
